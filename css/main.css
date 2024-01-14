@@ -5,11 +5,12 @@
     --clr-blue-mid: #1170CD;
     --clr-blue-dark: #1A1C6A;
     --clr-white: #fff;
-    --clr-bright: #EFF2F9;
+    --clr-bright: #fef6f2;
     --clr-dark: #1e2532;
     --clr-black: #000;
     --clr-grey: #656e83;
-    --clr-green: #084C41;
+    --clr-green: #216A61;
+    --clr-orange: #FF772F;
     --font-poppins: 'Poppins', sans-serif;
     --font-manrope: 'Manrope', sans-serif;;
     --transition: all 300ms ease-in-out;
@@ -60,6 +61,7 @@ a{
 .text-dark{color: var(--clr-dark);}
 .text-grey{color: var(--clr-grey);}
 .text-white{color: var(--clr-white);}
+.text-orange{color: var(--clr-orange)}
 
 /* backgrounds */
 .bg-blue{background-color: var(--clr-blue);}
@@ -106,6 +108,7 @@ a{
 .fs-23{font-size: 23px;}
 .fs-24{font-size: 24px;}
 .fs-25{font-size: 25px;}
+.fs-40{font-size: px;}
 
 .ls-1{letter-spacing: 1px;}
 .ls-2{letter-spacing: 2px;}
@@ -127,7 +130,7 @@ a{
 .bars .bar{
     width: 100%;
     height: 2px;
-    background-color: var(--clr-blue);
+    background-color: var(--clr-green);
     transition: var(--transition);
 }
 
@@ -145,9 +148,9 @@ a{
 }
 /*changed the button css here*/
 .btn-primary {
-    background-color: var(--clr-blue);
+    background-color: var(--clr-green);
     color: var(--clr-white);
-    border: 1px solid var(--clr-blue);
+    border: 1px solid var(--clr-green);
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
@@ -156,8 +159,8 @@ a{
 }
 
 .btn-primary:hover {
-    background-color: var(--clr-dark-blue); /* Adjust color on hover */
-    color: var(--clr-green); /* Adjust text color on hover */
+    background-color: var(--clr-dark-blue); /* Adjust color on hover ?? how can it be transparent */ 
+    color: var(--clr-orange); /* Adjust text color on hover */
     transform: scale(1.05); /* Add a slight scale effect on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow on hover */
 }
@@ -174,9 +177,9 @@ a{
 }
 
 .btn-secondary:hover {
-    background-color: var(--clr-blue);
+    background-color: var(--clr-green);
     color: var(--clr-white);
-    border-color: var(--clr-blue);
+    border-color: var(--clr-green);
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -204,11 +207,11 @@ a{
     font-size: 1.8rem;
 }
 .navbar-brand-text{
-    color: var(--clr-dark);
+    color: var(--clr-green);
     font-weight: 600;
 }
 .navbar-brand-text span{
-    color: var(--clr-blue);
+    color: var(--clr-orange);
 }
 .navbar-brand-icon{
     width: 25px;
@@ -218,7 +221,6 @@ a{
 }
 
 /* nav bar icon hover added by me */
-
 .navbar-brand-icon:hover {
     transform: rotate(360deg);
 }
@@ -246,11 +248,17 @@ a{
     border-top-left-radius: 8px;
     margin-top: 3.2rem;
 }
+
+.small-title{
+    padding: 30px 0 0 0  ;
+    color: var(--clr-green);
+}
+
 .lg-title{
     margin: 1.4rem 0;
     font-size: 37px;
     line-height: 1.4;
-    color: var(--clr-dark);
+    /* color: var(--clr-dark); */
 }
 .header-content p{
     margin-bottom: 2.6rem;
@@ -259,6 +267,7 @@ a{
 
 
 /* section one */
+
 .section-one{
     padding: 64px 0;
     min-height: 80vh;
@@ -310,7 +319,7 @@ a{
     margin-left: auto;
 }
 .section-two .section-item-title{
-    color: var(--clr-blue-dark);
+    color: var(--clr-green);
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -369,14 +378,16 @@ a{
 
 /* resume page */
 #about-sc {
-    padding: 4vw 0;
+    padding: 2vw 0;
+    background-color: var(--clr-bright);
 }
 
 .cv-form-row-title {
-    background-color: var(--clr-blue); /* Change to your preferred color */
-    color: var(--clr-green);
+    background-color: var(--clr-green); /* Change to your preferred color */
+    color: var(--clr-white);
     padding: 1.6rem;
     margin-bottom: 2rem;
+    border-radius: 5px;
 }
 
 .cv-form-row-title h3 {
@@ -387,7 +398,7 @@ a{
 }
 
 .cv-form-blk {
-    margin: 4vw 0;
+    margin: 1.5vw 0;
 }
 
 .cv-form-row {
@@ -395,6 +406,8 @@ a{
     border: 1px solid rgba(0, 0, 0, 0.08);
     margin-bottom: 1.5rem;
     position: relative;
+    border-radius: 5px;
+    background-color: var(--clr-white);
 }
 
 textarea {
@@ -402,15 +415,15 @@ textarea {
 }
 
 .form-elem {
-    margin-bottom: 4vw;
+    margin-bottom: 2.5vw;
     position: relative;
 }
 
 .form-label {
     display: block;
     font-weight: 600;
-    font-size: 1.2rem;
-    color: var(--clr-dark); /* Change to your preferred dark color */
+    font-size: 1.3rem;
+    color: var(--clr-black); /* Change to your preferred dark color */
     margin-bottom: 1rem;
 }
 
@@ -449,10 +462,11 @@ textarea {
 .repeater-remove-btn {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: var(--clr-blue-mid); /* Change to your preferred color */
+    background-color: var(--clr-orange); /* Change to your preferred color */
     font-size: 1.4rem;
-    color: var(--clr-white);
-    margin: 2vw 0;
+    color: var(--clr-bright);
+    margin: 1vw 0;
+    border-radius: 7px;
 }
 
 .repeater-remove-btn {
@@ -464,6 +478,10 @@ textarea {
 
 
 /* preview section */
+#preview-sc{
+    padding-top: 4rem;
+}
+
 .preview-cnt{
     border-radius: 5px;
     display: grid;
